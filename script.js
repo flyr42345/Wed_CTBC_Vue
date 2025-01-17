@@ -14,7 +14,30 @@ const app = Vue.createApp({
             web: [
                 "HTML","CSS","Javascript","jQuery","Vue","React","Angular","Git"
             ],
-            count:0
+            count:0,
+            pointX:0, pointY:0,
+            inputText:"預設文字",
+            toDoList:[],addToDo:""
+        }
+    },
+    // 方法區(函式)
+    methods:{
+        // 方法名稱() {}
+        test(){
+            console.log("我是測試方法");
+        },
+        methodEvent(e){
+            console.log(e);
+            console.log(e.target);
+            console.log(e.x,e.y);
+        },
+        getPoint(e){
+            this.pointX = e.x;
+            this.pointY = e.y;
+        },
+        addToDoList(){
+            // 將addToDo添加到toDoList陣列內
+            this.toDoList.push(this.addToDo);
         }
     }
 });
