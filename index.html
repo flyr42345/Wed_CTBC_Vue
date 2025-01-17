@@ -66,6 +66,15 @@
         <ol>
             <li v-for="list in toDoList">{{ list }}</li>
         </ol>
+
+        <h1>八、計算處理 computed</h1>
+        <p>監聽資料的變化，當資料有變化時才處理</p>
+        <input type="checkbox" name="" id="" v-model="isCheck">{{ checked }}
+
+        <h1>九、監聽 watch</h1>
+        <p>監聽資料的變化，同時可以記錄變化前後的值</p>
+        <div class="btn" @:click="updatePoint">點擊後儲存座標</div>
+
     </dip>
 
     <!-- 在安裝的元素無法使用資料 -->
